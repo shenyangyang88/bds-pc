@@ -1,9 +1,7 @@
-interface API {
-    [key: string]: string;
-}
+import type { APIUrl } from '@/types/api';
 
-const api: API = {
-
+const apiUrl: APIUrl = {
+  channel: '/pkusite-web/channel/index',
 };
 
-export default api;
+export default apiUrl;
