@@ -46,18 +46,39 @@ import { mapState } from 'vuex';
 import { ChannelAPIData } from '@/types/api';
 
 @Options({
-  computed: mapState([
-    'aboutChannelList',
-    'serviceChannelList',
-    'contactChannelList',
-  ]),
+  computed: mapState(['aboutChannelList', 'contactChannelList']),
 })
 export default class Links extends Vue {
   aboutChannelList!: Array<ChannelAPIData>;
 
-  serviceChannelList!: Array<ChannelAPIData>;
-
   contactChannelList!: Array<ChannelAPIData>;
+
+  serviceChannelList: Array<ChannelAPIData> = [
+    {
+      channelName: '读者服务',
+      url: '',
+    },
+    {
+      channelName: '书目下载',
+      url: '',
+    },
+    {
+      channelName: '在线定制书目',
+      url: '',
+    },
+    {
+      channelName: 'marc数据下载',
+      url: '',
+    },
+    {
+      channelName: '经销商列表',
+      url: '',
+    },
+    {
+      channelName: '招聘招标',
+      url: '',
+    },
+  ];
 }
 </script>
 
